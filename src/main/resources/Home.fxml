@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.shajid.app.shajid2207060.controller.HomeController"
+            prefWidth="900" prefHeight="600">
+
+    <top>
+        <VBox alignment="CENTER" spacing="8" BorderPane.alignment="CENTER">
+            <Label text="CV Builder"
+                   style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #222;"/>
+            <Label text="Create your professional CV in minutes"
+                   style="-fx-font-size: 15px; -fx-text-fill: #666;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="25">
+
+            <VBox spacing="20" alignment="CENTER"
+                  style="-fx-background-color: #f9f9f9;
+                         -fx-padding: 30;
+                         -fx-border-color: #ddd;
+                         -fx-border-radius: 10;
+                         -fx-background-radius: 10;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);">
+
+                <Label text="Welcome!"
+                       style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+                <Label text="Click below to start creating a new CV"
+                       style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+
+                <Button text="Create New CV"
+                        onAction="#handleCreateCV"
+                        style="-fx-padding: 12 40;
+                               -fx-background-color: #0d6efd;
+                               -fx-text-fill: white;
+                               -fx-font-size: 16px;
+                               -fx-background-radius: 8;"/>
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

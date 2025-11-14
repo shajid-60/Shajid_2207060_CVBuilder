@@ -13,4 +13,6 @@ module com.shajid.app.shajid2207060 {
 
     opens com.shajid.app.shajid2207060 to javafx.fxml;
     exports com.shajid.app.shajid2207060;
+    exports com.shajid.app.shajid2207060.controller;
+    opens com.shajid.app.shajid2207060.controller to javafx.fxml;
 }
