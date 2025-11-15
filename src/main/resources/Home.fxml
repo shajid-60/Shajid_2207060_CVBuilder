@@ -17,10 +17,10 @@
     </top>
 
     <center>
-        <VBox alignment="CENTER" spacing="25">
-
+        <VBox alignment="CENTER" spacing="25"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffffff, #aacff6)">
             <VBox spacing="20" alignment="CENTER"
-                  style="-fx-background-color: #f9f9f9;
+                  style="-fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff);
                          -fx-padding: 30;
                          -fx-border-color: #ddd;
                          -fx-border-radius: 10;
