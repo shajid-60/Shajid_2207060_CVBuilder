@@ -1,14 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="com.shajid.app.shajid2207060.controller.PreviewController"
+            prefWidth="900" prefHeight="650">
 
-</AnchorPane>
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-padding: 20;">
+            <Label text="CV Preview"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+            <Separator prefWidth="800"/>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox spacing="25" style="-fx-padding: 40; -fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff)">
+
+                <VBox spacing="10">
+                    <Label text="Personal Information"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                    <VBox spacing="5" style="-fx-padding: 10 0 0 20;">
+                        <Label fx:id="fullNameLabel"  style="-fx-font-size: 16px;"/>
+                        <Label fx:id="emailLabel"     style="-fx-font-size: 16px;"/>
+                        <Label fx:id="phoneLabel"     style="-fx-font-size: 16px;"/>
+                        <Label fx:id="addressLabel"   style="-fx-font-size: 16px;"/>
+                    </VBox>
+                </VBox>
+
+                <Separator/>
+
+                <VBox spacing="10">
+                    <Label text="Educational Qualifications"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="educationText"
+                              editable="false"
+                              wrapText="true"
+                              prefRowCount="5"
+                              style="-fx-font-size: 14px;"/>
+                </VBox>
+
+                <Separator/>
+
+                <VBox spacing="10">
+                    <Label text="Skills"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="skillsText"
+                              editable="false"
+                              wrapText="true"
+                              prefRowCount="4"
+                              style="-fx-font-size: 14px;"/>
+                </VBox>
+
+                <Separator/>
+
+                <VBox spacing="10">
+                    <Label text="Work Experience"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="experienceText"
+                              editable="false"
+                              wrapText="true"
+                              prefRowCount="5"
+                              style="-fx-font-size: 14px;"/>
+                </VBox>
+
+                <Separator/>
+
+                <VBox spacing="10">
+                    <Label text="Projects"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="projectsText"
+                              editable="false"
+                              wrapText="true"
+                              prefRowCount="4"
+                              style="-fx-font-size: 14px;"/>
+                </VBox>
+
+                <Separator/>
+
+                <HBox alignment="CENTER_RIGHT" style="-fx-padding: 20 0 0 0;">
+                    <Button text="Close"
+                            onAction="#handleClose"
+                            style="-fx-font-size: 16px;
+                                   -fx-background-color: #dc3545;
+                                   -fx-text-fill: white;
+                                   -fx-padding: 8 20;"/>
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
