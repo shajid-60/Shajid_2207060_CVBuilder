@@ -1,45 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.shajid.app.shajid2207060.controller.HomeController"
-            prefWidth="900" prefHeight="600">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shajid.app.shajid2207060.controller.HomeController">
 
     <top>
-        <VBox alignment="CENTER" spacing="8" BorderPane.alignment="CENTER">
-            <Label text="CV Builder"
-                   style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #222;"/>
-            <Label text="Create your professional CV in minutes"
-                   style="-fx-font-size: 15px; -fx-text-fill: #666;"/>
+        <VBox alignment="CENTER" prefHeight="63.0" prefWidth="900.0" spacing="8" BorderPane.alignment="CENTER">
+            <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="CV Builder">
+            <textFill>
+               <LinearGradient cycleMethod="REFLECT" endX="0.4356060673793158" endY="0.6628786795067065" startX="0.5047347690119885" startY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.23859648406505585" green="0.17894737422466278" blue="0.8947368264198303" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.7789473533630371" green="0.16155944764614105" blue="0.16155944764614105" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Label>
+            <Label style="-fx-font-size: 15px;" text="Create your professional CV in minutes">
+            <textFill>
+               <LinearGradient cycleMethod="REFLECT" endX="0.4356060673793158" endY="0.6628786795067065" startX="0.8418559666835899" startY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.23325276374816895" green="0.19653020799160004" blue="0.7473683953285217" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.6421052813529968" green="0.10226120799779892" blue="0.10226120799779892" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Label>
         </VBox>
     </top>
 
     <center>
-        <VBox alignment="CENTER" spacing="25"
-            style="-fx-background-color: linear-gradient(to bottom right, #ffffff, #aacff6)">
-            <VBox spacing="20" alignment="CENTER"
-                  style="-fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff);
-                         -fx-padding: 30;
-                         -fx-border-color: #ddd;
-                         -fx-border-radius: 10;
-                         -fx-background-radius: 10;
-                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);">
+        <VBox alignment="CENTER" spacing="25" style="-fx-background-color: linear-gradient(to bottom right, #ffffff, #aacff6)">
+            <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: linear-gradient(to bottom right, #ffffff, #aacff6); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);">
 
-                <Label text="Welcome!"
-                       style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                <Label prefHeight="32.0" prefWidth="106.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Welcome!">
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.4356060673793158" endY="0.2121211543227687" startX="0.4810606855334657" startY="0.4204545960281834">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5077582597732544" green="0.5705419182777405" blue="0.9263157844543457" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.47802197802197793">
+                           <color>
+                              <Color red="0.6868225932121277" green="0.10779727250337601" blue="0.8315789699554443" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.31578946113586426" green="0.06440545618534088" blue="0.02573099359869957" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
 
-                <Label text="Click below to start creating a new CV"
-                       style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+                <Label style="-fx-font-size: 14px;" text="Click below to start creating a new CV">
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.4356060673793158" endY="0.6628786795067065" startX="0.8418559666835899" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.23859648406505585" green="0.17894737422466278" blue="0.8947368264198303" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7684210538864136" green="0.1792982518672943" blue="0.5818654894828796" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
 
-                <Button text="Create New CV"
-                        onAction="#handleCreateCV"
-                        style="-fx-padding: 12 40;
-                               -fx-background-color: #0d6efd;
-                               -fx-text-fill: white;
-                               -fx-font-size: 16px;
-                               -fx-background-radius: 8;"/>
+                <Button nodeOrientation="LEFT_TO_RIGHT" onAction="#handleCreateCV" style="-fx-padding: 12 40; -fx-font-size: 20px; -fx-background-radius: 8; -fx-background-color: Black;" text="Create New CV" textAlignment="CENTER" wrapText="true">
+               <effect>
+                  <Bloom />
+               </effect>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.5681817888310461" endY="0.22348483403523764" startX="0.6742423375447593" startY="0.7613636327512336">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6865867376327515" green="0.6033918261528015" blue="0.7052631378173828" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4807692307692308">
+                           <color>
+                              <Color red="0.7711111307144165" green="0.2370370328426361" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.22592592239379883" green="0.40654319524765015" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
             </VBox>
 
         </VBox>

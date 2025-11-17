@@ -1,101 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.geometry.*?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.shajid.app.shajid2207060.controller.FormController"
-            prefHeight="650" prefWidth="900">
+<BorderPane prefHeight="650" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shajid.app.shajid2207060.controller.FormController">
 
-    <!-- HEADER -->
+
     <top>
         <VBox alignment="CENTER" spacing="5" BorderPane.alignment="CENTER">
-            <Label text="CV Information Form"
-                   style="-fx-font-size: 26px; -fx-font-weight: bold;" />
-            <Label text="Enter your details below to generate your CV"
-                   style="-fx-font-size: 14px; -fx-text-fill: #666;" />
+            <Label style="-fx-font-size: 26px; -fx-font-weight: bold;" text="CV Information Form">
+            <textFill>
+               <LinearGradient cycleMethod="REFLECT" endX="0.6439394083890048" endY="0.14015151334531367" startX="0.8030302741310813" startY="0.7689394734122537">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15409356355667114" green="0.1087719276547432" blue="0.6526315808296204" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5027472527472527">
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Label>
+            <Label style="-fx-font-size: 14px;" text="Enter your details below to generate your CV">
+            <textFill>
+               <LinearGradient cycleMethod="REFLECT" endX="0.6439394083890048" endY="0.14015151334531367" startX="0.8030302741310813" startY="0.7689394734122537">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.15409356355667114" green="0.1087719276547432" blue="0.6526315808296204" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.5027472527472527">
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Label>
         </VBox>
     </top>
 
+
     <center>
-        <ScrollPane fitToWidth="true">
-            <VBox spacing="25" style="-fx-padding: 30; -fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff)">
+        <ScrollPane fitToWidth="true" pannable="true" vbarPolicy="ALWAYS">
+            <content>
+                <VBox spacing="25" style="-fx-padding: 30; -fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff);">
 
-                <VBox spacing="10">
-                    <Label text="Personal Information"
-                           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
-                    <GridPane hgap="20" vgap="15">
-                        <columnConstraints>
-                            <ColumnConstraints percentWidth="25"/>
-                            <ColumnConstraints percentWidth="75"/>
-                        </columnConstraints>
+                    <!-- PERSONAL INFO -->
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Personal Information">
+                     <textFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.23633527755737305" green="0.22923976182937622" blue="0.4421052634716034" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill></Label>
 
-                        <Label text="Full Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"
-                               style="-fx-font-size: 14px;" />
-                        <TextField fx:id="fullNameField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                        <GridPane hgap="20" vgap="15">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="25" />
+                                <ColumnConstraints percentWidth="75" />
+                            </columnConstraints>
 
-                        <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"
-                               style="-fx-font-size: 14px;" />
-                        <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                            <Label text="Full Name:" GridPane.rowIndex="0">
+                        <textFill>
+                           <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="0.5027472527472527">
+                                    <color>
+                                       <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </textFill></Label>
+                            <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                        <Label text="Phone Number:" GridPane.rowIndex="2" GridPane.columnIndex="0"
-                               style="-fx-font-size: 14px;" />
-                        <TextField fx:id="phoneField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                            <Label text="Email:" GridPane.rowIndex="1">
+                        <textFill>
+                           <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="0.5027472527472527">
+                                    <color>
+                                       <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </textFill></Label>
+                            <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                        <Label text="Address:" GridPane.rowIndex="3" GridPane.columnIndex="0"
-                               style="-fx-font-size: 14px;" />
-                        <TextField fx:id="addressField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
-                    </GridPane>
+                            <Label text="Phone Number:" GridPane.rowIndex="2">
+                        <textFill>
+                           <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="0.5027472527472527">
+                                    <color>
+                                       <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </textFill></Label>
+                            <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                            <Label text="Address:" GridPane.rowIndex="3">
+                        <textFill>
+                           <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="0.5027472527472527">
+                                    <color>
+                                       <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </textFill></Label>
+                            <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                        </GridPane>
+                    </VBox>
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Educational Qualifications">
+                     <textFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5027472527472527">
+                                 <color>
+                                    <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill></Label>
+                        <TextArea fx:id="educationArea" prefRowCount="4" />
+                    </VBox>
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Skills">
+                     <textFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5027472527472527">
+                                 <color>
+                                    <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill></Label>
+                        <TextArea fx:id="skillsArea" prefRowCount="3" />
+                    </VBox>
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Work Experience">
+                     <textFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.5378787860725864" startX="0.9621212121212122" startY="0.35227277062155987">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.03102274239063263" green="0.02869395725429058" blue="0.16842105984687805" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5027472527472527">
+                                 <color>
+                                    <Color red="0.09815464913845062" green="0.0873294323682785" blue="0.7368420958518982" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.054035086184740067" blue="0.054035086184740067" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill></Label>
+                        <TextArea fx:id="experienceArea" prefRowCount="4" />
+                    </VBox>
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Projects" />
+                        <TextArea fx:id="projectsArea" prefRowCount="3" />
+                    </VBox>
+
+
+                    <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 0 20 0;">
+                        <Button fx:id="generateButton" onAction="#handleGenerateCV" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 10 25;" text="Generate CV" />
+                    </HBox>
+
                 </VBox>
-
-                <VBox spacing="10">
-                    <Label text="Educational Qualifications"
-                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-                    <TextArea fx:id="educationArea"
-                              prefRowCount="4"
-                              promptText="Enter degrees, institutions, achievements..."
-                              style="-fx-font-size: 14px;" />
-                </VBox>
-
-                <VBox spacing="10">
-                    <Label text="Skills"
-                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-                    <TextArea fx:id="skillsArea"
-                              prefRowCount="3"
-                              promptText="List your skills..."
-                              style="-fx-font-size: 14px;" />
-                </VBox>
-
-                <VBox spacing="10">
-                    <Label text="Work Experience"
-                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-                    <TextArea fx:id="experienceArea"
-                              prefRowCount="4"
-                              promptText="Enter your job titles, companies, roles..."
-                              style="-fx-font-size: 14px;" />
-                </VBox>
-
-                <VBox spacing="10">
-                    <Label text="Projects"
-                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-                    <TextArea fx:id="projectsArea"
-                              prefRowCount="3"
-                              promptText="Describe relevant projects..."
-                              style="-fx-font-size: 14px;" />
-                </VBox>
-
-                <HBox alignment="CENTER_RIGHT" spacing="10">
-                    <Button text="Generate CV"
-                            fx:id="generateButton"
-                            onAction="#handleGenerateCV"
-                            style="-fx-background-color: #0d6efd;
-                                   -fx-text-fill: white;
-                                   -fx-font-size: 16px;
-                                   -fx-padding: 10 25;" />
-                </HBox>
-
-            </VBox>
+            </content>
         </ScrollPane>
     </center>
 

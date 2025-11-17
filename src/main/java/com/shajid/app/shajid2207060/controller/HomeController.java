@@ -14,7 +14,7 @@ public class HomeController {
                     HomeController.class.getResource("/com/shajid/app/shajid2207060/Form.fxml")
             );
 
-            Scene scene = new Scene(loader.load(), 900, 650);
+            Scene scene = new Scene(loader.load());
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);

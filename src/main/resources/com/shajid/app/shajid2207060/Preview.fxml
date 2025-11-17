@@ -1,98 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.shajid.app.shajid2207060.controller.PreviewController"
-            prefWidth="900" prefHeight="650">
+<BorderPane prefHeight="650" prefWidth="900"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.shajid.app.shajid2207060.controller.PreviewController">
+
 
     <top>
         <VBox alignment="CENTER" spacing="5" style="-fx-padding: 20;">
-            <Label text="CV Preview"
-                   style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
-            <Separator prefWidth="800"/>
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="CV Preview">
+                <textFill>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop>
+                                <color><Color red="0.7579" green="0.1375" blue="0.1375"/></color>
+                            </Stop>
+                            <Stop offset="1.0">
+                                <color><Color red="0.1473" green="0.0796" blue="0.0796"/></color>
+                            </Stop>
+                        </stops>
+                    </LinearGradient>
+                </textFill>
+            </Label>
+            <Separator prefWidth="800" />
         </VBox>
     </top>
 
+
     <center>
         <ScrollPane fitToWidth="true">
-            <VBox spacing="25" style="-fx-padding: 40; -fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff)">
+            <content>
+                <VBox spacing="25"
+                      style="-fx-padding: 40; -fx-background-color: linear-gradient(to bottom right, #ffffff, #5ca6ff)">
 
-                <VBox spacing="10">
-                    <Label text="Personal Information"
-                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
-                    <VBox spacing="5" style="-fx-padding: 10 0 0 20;">
-                        <Label fx:id="fullNameLabel"  style="-fx-font-size: 16px;"/>
-                        <Label fx:id="emailLabel"     style="-fx-font-size: 16px;"/>
-                        <Label fx:id="phoneLabel"     style="-fx-font-size: 16px;"/>
-                        <Label fx:id="addressLabel"   style="-fx-font-size: 16px;"/>
+                    <!-- Personal Info -->
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Personal Information">
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color><Color red="0.7579" green="0.1375" blue="0.1375"/></color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color><Color red="0.1473" green="0.0796" blue="0.0796"/></color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+
+                        <VBox spacing="5" style="-fx-padding: 10 0 0 20;">
+                            <Label fx:id="fullNameLabel" style="-fx-font-size: 16px;" />
+                            <Label fx:id="emailLabel" style="-fx-font-size: 16px;" />
+                            <Label fx:id="phoneLabel" style="-fx-font-size: 16px;" />
+                            <Label fx:id="addressLabel" style="-fx-font-size: 16px;" />
+                        </VBox>
                     </VBox>
+
+                    <Separator />
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Educational Qualifications">
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop><color><Color red="0.7579" green="0.1375" blue="0.1375"/></color></Stop>
+                                        <Stop offset="1.0"><color><Color red="0.1473" green="0.0796" blue="0.0796"/></color></Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <TextArea fx:id="educationText" editable="false" prefRowCount="5" wrapText="true" style="-fx-font-size: 14px;"/>
+                    </VBox>
+
+                    <Separator />
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Skills">
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop><color><Color red="0.7579" green="0.1375" blue="0.1375"/></color></Stop>
+                                        <Stop offset="1.0"><color><Color red="0.1473" green="0.0796" blue="0.0796"/></color></Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <TextArea fx:id="skillsText" editable="false" prefRowCount="4" wrapText="true" style="-fx-font-size: 14px;"/>
+                    </VBox>
+
+                    <Separator />
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Work Experience"/>
+                        <TextArea fx:id="experienceText" editable="false" prefRowCount="5" wrapText="true" style="-fx-font-size: 14px;"/>
+                    </VBox>
+
+                    <Separator />
+
+
+                    <VBox spacing="10">
+                        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Projects"/>
+                        <TextArea fx:id="projectsText" editable="false" prefRowCount="4" wrapText="true" style="-fx-font-size: 14px;"/>
+                    </VBox>
+
+                    <Separator />
+
+
+                    <HBox alignment="CENTER_RIGHT" style="-fx-padding: 20 0 0 0;">
+                        <Button onAction="#handleClose"
+                                text="Close"
+                                style="-fx-font-size: 16px; -fx-background-color: #dc3545; -fx-text-fill: white; -fx-padding: 8 20;" />
+                    </HBox>
                 </VBox>
-
-                <Separator/>
-
-                <VBox spacing="10">
-                    <Label text="Educational Qualifications"
-                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
-                    <TextArea fx:id="educationText"
-                              editable="false"
-                              wrapText="true"
-                              prefRowCount="5"
-                              style="-fx-font-size: 14px;"/>
-                </VBox>
-
-                <Separator/>
-
-                <VBox spacing="10">
-                    <Label text="Skills"
-                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
-                    <TextArea fx:id="skillsText"
-                              editable="false"
-                              wrapText="true"
-                              prefRowCount="4"
-                              style="-fx-font-size: 14px;"/>
-                </VBox>
-
-                <Separator/>
-
-                <VBox spacing="10">
-                    <Label text="Work Experience"
-                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
-                    <TextArea fx:id="experienceText"
-                              editable="false"
-                              wrapText="true"
-                              prefRowCount="5"
-                              style="-fx-font-size: 14px;"/>
-                </VBox>
-
-                <Separator/>
-
-                <VBox spacing="10">
-                    <Label text="Projects"
-                           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
-                    <TextArea fx:id="projectsText"
-                              editable="false"
-                              wrapText="true"
-                              prefRowCount="4"
-                              style="-fx-font-size: 14px;"/>
-                </VBox>
-
-                <Separator/>
-
-                <HBox alignment="CENTER_RIGHT" style="-fx-padding: 20 0 0 0;">
-                    <Button text="Close"
-                            onAction="#handleClose"
-                            style="-fx-font-size: 16px;
-                                   -fx-background-color: #dc3545;
-                                   -fx-text-fill: white;
-                                   -fx-padding: 8 20;"/>
-                </HBox>
-
-            </VBox>
+            </content>
         </ScrollPane>
     </center>
 

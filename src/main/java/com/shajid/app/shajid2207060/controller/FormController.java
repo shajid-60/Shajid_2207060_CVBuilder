@@ -37,7 +37,7 @@ public class FormController {
             );
 
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load(), 900, 650));
+            stage.setScene(new Scene(loader.load()));
             stage.setTitle("CV Preview");
             stage.show();
 
