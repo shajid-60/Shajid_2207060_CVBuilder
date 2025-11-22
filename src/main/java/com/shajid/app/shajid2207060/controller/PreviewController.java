@@ -18,17 +18,20 @@ public class PreviewController {
     @FXML private TextArea experienceText;
     @FXML private TextArea projectsText;
 
-    @FXML
-    public void initialize() {
-        fullNameLabel.setText("Full Name: " + CVData.fullName);
-        emailLabel.setText("Email: "        + CVData.email);
-        phoneLabel.setText("Phone: "        + CVData.phone);
-        addressLabel.setText("Address: "    + CVData.address);
+    private CVData cv;
 
-        educationText.setText(CVData.education);
-        skillsText.setText(CVData.skills);
-        experienceText.setText(CVData.experience);
-        projectsText.setText(CVData.projects);
+    public void setCVData(CVData cv) {
+        this.cv = cv;
+
+        fullNameLabel.setText("Full Name: " + cv.getFullName());
+        emailLabel.setText("Email: " + cv.getEmail());
+        phoneLabel.setText("Phone: " + cv.getPhone());
+        addressLabel.setText("Address: " + cv.getAddress());
+
+        educationText.setText(cv.getEducation());
+        skillsText.setText(cv.getSkills());
+        experienceText.setText(cv.getExperience());
+        projectsText.setText(cv.getProjects());
     }
 
     @FXML

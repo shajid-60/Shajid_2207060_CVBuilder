@@ -1,4 +1,6 @@
 package com.shajid.app.shajid2207060.controller;
+
+import com.shajid.app.shajid2207060.database.CVDAO;
 import com.shajid.app.shajid2207060.model.CVData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,15 +24,22 @@ public class FormController {
     @FXML
     private void handleGenerateCV() {
 
-        CVData.fullName = fullNameField.getText();
-        CVData.email = emailField.getText();
-        CVData.phone = phoneField.getText();
-        CVData.address = addressField.getText();
-        CVData.education = educationArea.getText();
-        CVData.skills = skillsArea.getText();
-        CVData.experience = experienceArea.getText();
-        CVData.projects = projectsArea.getText();
+        // Create a CVData object from the form values
+        CVData cv = new CVData(
+                fullNameField.getText(),
+                emailField.getText(),
+                phoneField.getText(),
+                addressField.getText(),
+                educationArea.getText(),
+                skillsArea.getText(),
+                experienceArea.getText(),
+                projectsArea.getText()
+        );
 
+        // Save CV data into SQLite database
+        CVDAO.insert(cv);
+
+        // Open Preview window
         try {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/com/shajid/app/shajid2207060/Preview.fxml")
